@@ -1,0 +1,351 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+
+body {
+    margin: 60px;
+    font: 16px/1.6 'Inter';
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin: 15px;
+    }
+
+}
+
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar img {
+    width: 100px;
+    padding: 10px;
+}
+
+.topbar ul {
+    list-style-type: none;
+    font-family: 'Inter';
+    font-weight: 900;
+}
+
+.topbar ul li {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 10px;
+    border: 4px solid black;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    width: auto;
+}
+
+.topbar ul li:hover {
+    background-color: black;
+}
+
+.topbar ul li:hover a {
+    color: white;
+}
+
+.topbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
+@media screen and (max-width: 768px) {
+    .topbar ul li a {
+        font-size: 3vw;
+    }
+
+    .topbar ul li {
+        margin: auto;
+    }
+}
+
+
+#title {
+    text-align: center;
+    padding: 15px;
+}
+
+#title h2 {
+    font-size: 5.06em;
+	line-height: 1.28em;
+	padding-top: 0.296em;
+	margin-bottom: 0.0247em;
+}
+
+.subtext {
+    font-size: 1.56em;
+	line-height: 1.04em;
+	padding-top: 0.200em;
+	margin-bottom: 0.840em;
+}
+
+@media screen and (max-width: 768px) {
+    #title h2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    .subtext {
+        font-size: 4vw;
+    }
+}
+
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.text {
+    color: white;
+}
+
+.text h2 {
+    font-size: 1.56em;
+	line-height: 1.04em;
+	padding-top: 0.200em;
+	margin-bottom: 0.840em;
+}
+
+.text h1 {
+    font-size: 4vw;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.text p {
+    font-size: 1.5vw;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .text h2 {
+        font-size: 0.8em;
+    }
+
+    .text h1 {
+        font-size: 2em;
+    }
+
+    .text p {
+        font-size: 0.5em;
+    }
+}
+
+
+hr {
+    width: 10%;
+    margin: 0 auto;
+}
+
+.actor, .director {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#camera {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin:  0 auto;
+    width: 15rem;
+}
+
+section.actor, section.director {
+    position: relative;
+    overflow-wrap: break-word;
+    border: 4px solid black;
+    width: 100%;
+    height: 100%; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+ }
+
+section.director {
+    background: black;
+    color: white;
+}
+
+.director h2, .actor h2 {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+.directname h4 {
+    float: right;
+    font-size: 2rem;
+}
+
+.actorspot h4 {
+    float: left;
+    font-size: 2rem;
+}
+
+.spotlight p, .directspot p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .spotlight h2, .spotlight p, .directspot h2, .directspot p {
+        font-size: 3vw;
+        max-width: 50%; 
+        padding: 5px; 
+        display: flex;
+        margin: auto;
+    }
+
+    .directname h4, .actorspot h4 {
+        display: flex;
+        margin: auto;
+        font-size: 3.5vw;
+        max-width: 50%;
+        padding: 5px;
+        float: none;
+    }
+
+    #camera {
+        margin: 0 auto;
+    }
+}
+
+.articletitle {
+    font-size: 2vw;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 500px;
+    height: 500px;
+    display: block;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    border: 4px solid black;
+    object-fit: cover;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.buttontext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card:hover .buttontext {
+    opacity: 1;
+}
+
+.buttontext h4 {
+    color: white;
+    margin: 0;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.buttontext em {
+    font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+
+    .articletitle, .sportarticles {
+        font-size: 3vw;
+        margin: 0 auto;
+    }
+
+    .articles {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttontext {
+        font-size: 14px;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+body > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

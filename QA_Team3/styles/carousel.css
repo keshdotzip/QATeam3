@@ -1,0 +1,56 @@
+.icon{
+    width: 1.8em;
+    height: 1.8em;
+    margin: 0 1em;
+    cursor: pointer;
+}
+.prev, .next{
+    width: 5em;
+    height: 5em;
+    cursor: pointer;
+}
+.play-pause {
+    width: 4em;
+    height: 4em;
+}
+.big-image {
+    width: 100%;
+    height: auto;
+}
+.big-image>img {
+    width: 100%;
+    border-radius: 2em;
+}
+.carousel, .big-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70vw;
+    position: relative;
+}
+.img-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+.slider-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 90%;
+}
+.slider-control {
+    cursor:pointer;
+    position: absolute;
+    bottom: 15%;
+}
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
